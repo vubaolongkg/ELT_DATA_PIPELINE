@@ -38,7 +38,6 @@ services:
 
   airflow-init:
     <<: *airflow-common
-    command: version
     environment:
       <<: *airflow-common-env
       _AIRFLOW_DB_UPGRADE: 'true'
