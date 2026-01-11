@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Docker & Airflow
+logs/
+*.pid
+airflow-webserver.pid
+
+# Environment variables (Bảo mật: Không bao giờ up file chứa mật khẩu lên Git)
+.env
+
+# IDE settings (VS Code, Pycharm)
+.vscode/
+.idea/
+.DS_Store
+
+data/
