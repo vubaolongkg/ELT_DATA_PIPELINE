@@ -1,0 +1,23 @@
+name: 'elt_dbt'
+version: '1.0.0'
+config-version: 2
+
+# Cấu hình đường dẫn (giữ nguyên mặc định)
+profile: 'elt_dbt' # Tên profile kết nối (sẽ khai báo ở bước 2)
+model-paths: ["models"]
+analysis-paths: ["analyses"]
+test-paths: ["tests"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
+
+target-path: "target"
+clean-targets:
+  - "target"
+  - "dbt_packages"
+
+# Cấu hình cách lưu bảng vào Database
+models:
+  elt_dbt:
+    # materialized: table -> Luôn tạo bảng thật (thay vì View)
+    +materialized: table
